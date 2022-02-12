@@ -1,3 +1,4 @@
+import { NewLineText } from "components/NewLineText";
 import { usePosts } from "app/app.hooks";
 
 export const PostsPage = () => {
@@ -11,7 +12,10 @@ export const PostsPage = () => {
   return (
     <>
       {data.map((post) => (
-        <p key={post.id}>{post.title}</p>
+        <article key={post.id}>
+          <h1>{post.title}</h1>
+          <NewLineText content={post.body} />
+        </article>
       ))}
     </>
   );
