@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 import { NewLineText } from "components/NewLineText";
+import { CardLink } from "components/Card";
 import { usePosts } from "app/app.hooks";
 
 export const PostsPage = () => {
@@ -12,10 +15,10 @@ export const PostsPage = () => {
   return (
     <>
       {data.map((post) => (
-        <article key={post.id}>
+        <CardLink key={post.id} elementType="article" to={`/post/${post.id}`}>
           <h1>{post.title}</h1>
           <NewLineText content={post.body} />
-        </article>
+        </CardLink>
       ))}
     </>
   );
