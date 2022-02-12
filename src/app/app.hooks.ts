@@ -12,3 +12,23 @@ export const usePosts = () => {
     return res.json();
   });
 };
+
+export const usePost = (postId: number) => {
+  return useQuery<Post, Error>(["post", postId], async () => {
+    const res = await fetch(`${BASE_URL}/posts/${postId}`);
+
+    if (!res.ok) throw new Error("Error...");
+
+    return res.json();
+  });
+};
+
+export const useComments = (postId: number) => {
+  return useQuery<Comment[], Error>(["comments", postId], async () => {
+    const res = await fetch(`${BASE_URL}/posts/${postId}/comments`);
+
+    if (!res.ok) throw new Error("Error...");
+
+    return res.json();
+  });
+};

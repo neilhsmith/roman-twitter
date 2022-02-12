@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import { NewLineText } from "components/NewLineText";
 import { CardLink } from "components/Card";
 import { usePosts } from "app/app.hooks";
