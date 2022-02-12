@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto 4rem auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.title,
+.subtitle {
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--color-text-light);
+  font-weight: var(--weight-bold);
+}
