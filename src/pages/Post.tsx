@@ -2,16 +2,14 @@ import { useMatch, Link } from "react-router-dom";
 
 import { NewLineText } from "components/NewLineText";
 import { Card } from "components/Card";
+import { CommentList } from "components/CommentList";
 import { usePost, useComments } from "app/app.hooks";
 
 export const PostPage = () => {
   return (
     <article>
       <Post />
-      <section>
-        <h1>Comments</h1>
-        <Comments />
-      </section>
+      <Comments />
     </article>
   );
 };
@@ -62,15 +60,5 @@ const Comments = () => {
   if (error) return <p>{`An error has occured: ${error.message}`}</p>;
   if (!data) return <p>No posts found...</p>;
 
-  return (
-    <>
-      {data.map((comment) => (
-        <article key={comment.id}>
-          <h1>{comment.name}</h1>
-          <p>By: {comment.email}</p>
-          <p>{comment.body}</p>
-        </article>
-      ))}
-    </>
-  );
+  return <CommentList comments={data} />;
 };

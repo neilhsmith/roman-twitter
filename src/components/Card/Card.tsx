@@ -1,10 +1,10 @@
-import { ReactChild, ReactNode } from "react";
+import { ReactNode } from "react";
 
 import styles from "./Card.module.css";
 
 export type CardProps = {
   elementType: "article" | "section" | "div";
-  children: ReactNode | ReactNode[] | NamedChildProps;
+  children: ReactNode | NamedChildProps;
 };
 
 type NamedChildProps = {
@@ -15,8 +15,6 @@ type NamedChildProps = {
 
 export const Card = ({ elementType, children }: CardProps) => {
   const Element = elementType;
-  const isNamedSlots = (children: any): children is NamedChildProps =>
-    typeof children === "object" && "content" in children;
 
   if (isNamedSlots(children)) {
     const { header, content, footer } = children;
@@ -32,3 +30,6 @@ export const Card = ({ elementType, children }: CardProps) => {
 
   return <Element className={styles.wrapper}>{children}</Element>;
 };
+
+const isNamedSlots = (children: any): children is NamedChildProps =>
+  typeof children === "object" && "content" in children;

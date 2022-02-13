@@ -1,0 +1,20 @@
+.comments {
+  margin-top: 4rem;
+}
+
+.commentsTitle {
+  margin-bottom: 1rem;
+}
+
+.comment {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.commentTitle {
+  font-size: 2rem;
+}
+
+.commentContent {
+  margin-bottom: 1.4rem;
+}
