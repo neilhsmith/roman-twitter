@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/roman-twitter/static/css/main.26113889.css",
-    "main.js": "/roman-twitter/static/js/main.8511ee17.js",
+    "main.css": "/roman-twitter/static/css/main.0f171fff.css",
+    "main.js": "/roman-twitter/static/js/main.f7d99a18.js",
     "static/js/787.70cf0f09.chunk.js": "/roman-twitter/static/js/787.70cf0f09.chunk.js",
     "index.html": "/roman-twitter/index.html",
-    "main.26113889.css.map": "/roman-twitter/static/css/main.26113889.css.map",
-    "main.8511ee17.js.map": "/roman-twitter/static/js/main.8511ee17.js.map",
+    "main.0f171fff.css.map": "/roman-twitter/static/css/main.0f171fff.css.map",
+    "main.f7d99a18.js.map": "/roman-twitter/static/js/main.f7d99a18.js.map",
     "787.70cf0f09.chunk.js.map": "/roman-twitter/static/js/787.70cf0f09.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26113889.css",
-    "static/js/main.8511ee17.js"
+    "static/css/main.0f171fff.css",
+    "static/js/main.f7d99a18.js"
   ]
 }
