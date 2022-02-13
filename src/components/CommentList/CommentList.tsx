@@ -6,7 +6,7 @@ type CommentListProps = {
 };
 
 export const CommentList = ({ comments }: CommentListProps) => (
-  <div className={styles.comments}>
+  <section className={styles.comments}>
     <h1 className={styles.commentsTitle}>Comments</h1>
     {comments.map((comment) => (
       <article key={comment.id} className={styles.comment}>
@@ -15,5 +15,5 @@ export const CommentList = ({ comments }: CommentListProps) => (
         <p>By: {comment.email}</p>
       </article>
     ))}
-  </div>
+  </section>
 );
