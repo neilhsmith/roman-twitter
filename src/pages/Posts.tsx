@@ -13,6 +13,7 @@ export const PostsPage = () => {
 
   return (
     <PostLayout
+      title="All Posts"
       posts={data.map((post) => (
         <CardLink key={post.id} elementType="article" to={`/post/${post.id}`}>
           <h1>{post.title}</h1>

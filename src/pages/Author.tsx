@@ -20,6 +20,7 @@ export const AuthorPage = () => {
 
   return (
     <PostLayout
+      title={`Author ${authorId}`}
       posts={posts.map((post) => (
         <CardLink key={post.id} elementType="article" to={`/post/${post.id}`}>
           <h1>{post.title}</h1>
