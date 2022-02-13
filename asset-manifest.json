@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/roman-twitter/static/css/main.814bc502.css",
+    "main.js": "/roman-twitter/static/js/main.25fe637e.js",
+    "static/js/787.70cf0f09.chunk.js": "/roman-twitter/static/js/787.70cf0f09.chunk.js",
+    "index.html": "/roman-twitter/index.html",
+    "main.814bc502.css.map": "/roman-twitter/static/css/main.814bc502.css.map",
+    "main.25fe637e.js.map": "/roman-twitter/static/js/main.25fe637e.js.map",
+    "787.70cf0f09.chunk.js.map": "/roman-twitter/static/js/787.70cf0f09.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.814bc502.css",
+    "static/js/main.25fe637e.js"
+  ]
+}
