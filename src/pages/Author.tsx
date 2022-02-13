@@ -1,8 +1,6 @@
 import { useMatch } from "react-router-dom";
-import { PostLayout } from "components/PostLayout";
-import { CardLink } from "components/Card";
-import { NewLineText } from "components/NewLineText";
 import { usePosts } from "app/app.hooks";
+import { PostList } from "components/PostList";
 
 export const AuthorPage = () => {
   const match = useMatch("/author/:id");
@@ -18,17 +16,5 @@ export const AuthorPage = () => {
 
   const posts = data.filter((post) => post.userId === authorId);
 
-  return (
-    <PostLayout
-      title={`Author ${authorId}`}
-      posts={posts.map((post) => (
-        <CardLink key={post.id} elementType="article" to={`/post/${post.id}`}>
-          {{
-            header: <h1>{post.title}</h1>,
-            content: <NewLineText content={post.body} />,
-          }}
-        </CardLink>
-      ))}
-    />
-  );
+  return <PostList title={`Author ${authorId}`} posts={posts} />;
 };
