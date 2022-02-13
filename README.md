@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Roman Twitter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Demo](https://neilhsmith.github.io/roman-twitter/)
 
-## Available Scripts
+## Tools
 
-In the project directory, you can run:
+- create-react-app
+- typescript
+- react-router
+- react-query
+- CSS Modules
 
-### `npm start`
+## Notes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This was built in about 4 hours total. There's several things I'd improve, and still might (after the Super Bowl tonight), like better loading/error indicators, styling updates and some small refactors but I think this is good to show my understanding of React.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Card component uses the Named Child pattern and is also extended with the CardLink component.
 
-### `npm test`
+CommentList is a plain, dumb component that renders its list of Comments as semantically correct HTML. I'm a believer if YAGNI and since the CommentList only appears in one place on the app I didn't create a child Comment component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+GridLayout is a component which takes a list of ReactNodes and an optional title and renders the items either as 50% or 100% width columns. The layout style is persisted in local storage so that the user's preference is defaulted through route changes and reloads.
 
-### `npm run build`
+NewLineText is a simple component that breaks a string of text into paragraphs on newline characters (\n).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+PostList renders a list of Posts with the GridLayout component but it uses the CardLink component so that each post is wrapped in a link.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The pages are straight-forward. They fetch their data and then pass it down to their children to be rendered. I do have some plans to improve the Post page. It currently displays 2 different loading indicators - one for the Post and a second for the comments. It also doesn't render the Post area until the post is fetched which makes the comments section move vertically once the post is finally rendered. These are things I'd improve with more time.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I've typically used styled-components in the past and figured this app is small enough to that trying out css modules wouldn't be an issue. I ended up repeating some styles in the Card and CardList components which feels a little wrong. Ultimately, I wish I went with a css-in-js solution.
