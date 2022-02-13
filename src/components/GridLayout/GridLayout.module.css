@@ -16,6 +16,18 @@
   margin-left: auto;
 }
 
+.button {
+  background: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  color: var(--color-text-light);
+}
+.active {
+  color: var(--color-text);
+  cursor: unset;
+}
+
 .items {
   display: grid;
   grid-template-rows: 1fr;

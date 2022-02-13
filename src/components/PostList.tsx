@@ -1,5 +1,5 @@
 import { Post } from "app/app.types";
-import { PostLayout } from "components/PostLayout";
+import { GridLayout } from "components/GridLayout";
 import { CardLink } from "components/Card";
 import { NewLineText } from "components/NewLineText";
 
@@ -10,9 +10,9 @@ type PostLinkProps = {
 
 export const PostList = ({ title, posts }: PostLinkProps) => {
   return (
-    <PostLayout
+    <GridLayout
       title={title}
-      posts={posts.map((post) => (
+      items={posts.map((post) => (
         <CardLink key={post.id} elementType="article" to={`/post/${post.id}`}>
           {{
             header: <h1>{post.title}</h1>,
