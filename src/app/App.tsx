@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 import { AuthorPage, PostPage, PostsPage } from "pages";
@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <Router>
         <div className={styles.wrapper}>
           <header className={styles.header} role="banner">
             <Link to="/" className={styles.title}>
@@ -25,7 +25,7 @@ export const App = () => {
             </Routes>
           </main>
         </div>
-      </BrowserRouter>
+      </Router>
     </QueryClientProvider>
   );
 };
