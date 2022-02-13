@@ -26,4 +26,4 @@ PostList renders a list of Posts with the GridLayout component but it uses the C
 
 The pages are straight-forward. They fetch their data and then pass it down to their children to be rendered. I do have some plans to improve the Post page. It currently displays 2 different loading indicators - one for the Post and a second for the comments. It also doesn't render the Post area until the post is fetched which makes the comments section move vertically once the post is finally rendered. These are things I'd improve with more time.
 
-I've typically used styled-components in the past and figured this app is small enough to that trying out css modules wouldn't be an issue. I ended up repeating some styles in the Card and CardList components which feels a little wrong. Ultimately, I wish I went with a css-in-js solution.
+I've typically used styled-components in the past and figured this app is small enough that trying out css modules wouldn't be an issue. I ended up repeating some styles in the Card and CardList components which feels a little wrong. Ultimately, I wish I went with a css-in-js solution.
