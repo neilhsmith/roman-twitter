@@ -7,3 +7,14 @@
   border: 1px solid var(--color-border);
   box-shadow: 0 4px 4px var(--color-shadow);
 }
+
+.header {
+  margin-bottom: 1.8rem;
+}
+
+.content {
+}
+
+.footer {
+  margin-top: 1.8rem;
+}

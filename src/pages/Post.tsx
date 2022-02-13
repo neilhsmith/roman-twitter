@@ -30,13 +30,22 @@ const Post = () => {
 
   return (
     <Card elementType="div">
-      <header>
-        <h1>{data.title}</h1>
-        <p>
-          By: <Link to={`/author/${data.userId}`}>Author {data.userId}</Link>
-        </p>
-      </header>
-      <NewLineText content={data.body} />
+      {{
+        header: (
+          <header>
+            <h1>{data.title}</h1>
+          </header>
+        ),
+        content: <NewLineText content={data.body} />,
+        footer: (
+          <footer>
+            <p>
+              By:{" "}
+              <Link to={`/author/${data.userId}`}>Author {data.userId}</Link>
+            </p>
+          </footer>
+        ),
+      }}
     </Card>
   );
 };
